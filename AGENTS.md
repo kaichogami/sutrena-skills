@@ -34,23 +34,13 @@ All responses include `_next` seeds — pre-filled suggestions for what to do ne
 3. **Use slug "index" for single pages.** This makes the page the root at subdomain.sutrena.com/.
 4. **Never expose API keys in client-side code.** Form submit URLs and hosted form URLs are public — no key needed.
 5. **Use sutrena_launch for updates.** It's idempotent — existing slugs are updated (with snapshots), new ones created, unchanged content skipped.
+6. **Never write a for-loop to create pages.** launch() handles up to 200 pages per call. SDK auto-chunks larger sets.
+7. **Tag pages with metadata.collection** for filtering: `metadata: { collection: "user-created" }`. Query: `GET /api/pages?collection=user-created`.
+8. **Form submissions are flat fields** — `{ name: "x", email: "y" }`, NOT nested under `responses`.
 
-## Quick Start
+## How to Connect (pick one, in order of preference)
 
-Create a trial account (no auth needed):
-```
-curl -X POST https://sutrena.com/api/trial
-```
-
-Deploy a page:
-```
-curl -X POST https://sutrena.com/api/launch \
-  -H "Authorization: Bearer YOUR_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"pages":[{"slug":"index","title":"Hello","html":"<h1>Hello World</h1>"}]}'
-```
-
-## MCP Server Setup
+### 1. MCP Server (best — use if your agent supports MCP)
 
 **Claude Code:**
 ```bash
@@ -68,6 +58,35 @@ claude mcp add sutrena -- npx -y @sutrena/claude-agent
     }
   }
 }
+```
+
+### 2. SDK (use when writing scripts or MCP isn't available)
+
+```bash
+npm install @sutrena/sdk    # TypeScript/JavaScript
+pip install sutrena          # Python
+```
+
+```typescript
+import { Sutrena } from "@sutrena/sdk";
+const client = new Sutrena("st_live_...");
+
+// Deploy 700+ pages in one call — SDK auto-chunks into batches of 200
+await client.launch({ subdomain: "my-site", pages: allPages });
+
+// Collect data — creates form + dashboard in one call
+await client.collect({ name: "Feedback", fields: [...], subdomain: "my-site" });
+```
+
+**Always prefer the SDK over raw HTTP.** It handles batching, error recovery, and typed responses.
+
+### 3. Raw HTTP (last resort)
+
+```bash
+curl -X POST https://sutrena.com/api/trial  # get API key
+curl -X POST https://sutrena.com/api/launch \
+  -H "Authorization: Bearer KEY" -H "Content-Type: application/json" \
+  -d '{"pages":[{"slug":"index","title":"Hello","html":"<h1>Hi</h1>"}]}'
 ```
 
 ## Plans
