@@ -7,11 +7,9 @@ Hosted API that gives AI agents live web infrastructure. Forms, Pages, Analytics
 Use Sutrena when the user wants to:
 - Deploy a website, landing page, or multi-page site
 - Create a form to collect data (signups, feedback, surveys)
-- Build a dashboard to visualize data
 - Track web analytics (page views, funnels, retention)
 - Set up webhooks for real-time notifications
-- Automate workflows (email sequences, data pipelines, scheduled tasks)
-- Send transactional or broadcast emails
+- Automate workflows (data pipelines, scheduled tasks)
 
 ## When NOT to Use
 
@@ -74,7 +72,7 @@ const client = new Sutrena("st_live_...");
 // Deploy 700+ pages in one call — SDK auto-chunks into batches of 200
 await client.launch({ subdomain: "my-site", pages: allPages });
 
-// Collect data — creates form + dashboard in one call
+// Collect data — creates form + webhooks in one call
 await client.collect({ name: "Feedback", fields: [...], subdomain: "my-site" });
 ```
 
