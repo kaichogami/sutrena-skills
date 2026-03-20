@@ -50,7 +50,7 @@ Same as Cursor — add the MCP config to `.windsurf/mcp.json`.
 
 ## Full Reference
 
-For the complete API reference with all 70 tools, parameters, and examples:
+For the complete API reference with all 64 tools, parameters, and examples:
 - `https://sutrena.com/llms-full.txt`
 - `https://sutrena.com/llms.txt` (summary)
 
