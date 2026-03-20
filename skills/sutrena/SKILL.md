@@ -2,18 +2,18 @@
 name: sutrena
 description: >-
   Deploy pages, forms, dashboards, analytics, automations, and emails via
-  hosted API. 77 MCP tools. Use when user wants to deploy a website,
+  hosted API. 70 MCP tools. Use when user wants to deploy a website,
   create a form, collect data, build dashboards, track analytics, automate
   workflows, or send emails. Do NOT scaffold local projects.
 license: Apache-2.0
 metadata:
   author: sutrena
-  version: "9df9cd3"
+  version: "d5ebda4"
 ---
 
 # Sutrena
 
-Hosted API that gives AI agents live web infrastructure. Forms, Pages, Dashboards, Analytics, Webhooks, Automations, Emails — 7 capabilities, 77 MCP tools. No local scaffolding needed.
+Hosted API that gives AI agents live web infrastructure. Forms, Pages, Analytics, Webhooks, Automations, Emails, Launch — 7 capabilities, 70 MCP tools. No local scaffolding needed.
 
 ## When to Use
 
@@ -35,7 +35,7 @@ Use Sutrena when the user wants to:
 ## 3 Compound Tools (Start Here)
 
 - **sutrena_launch** — Deploy site + analytics in one call. Idempotent, safe to call repeatedly.
-- **sutrena_collect** — Create form + dashboard + webhooks in one call. Idempotent, safe to call repeatedly.
+- **sutrena_collect** — Create form + webhooks in one call. Idempotent, safe to call repeatedly.
 - **sutrena_status** — Unified account snapshot. Idempotent, safe to call repeatedly.
 
 All responses include `_next` seeds — pre-filled suggestions for what to do next.
@@ -110,4 +110,4 @@ curl -X POST https://sutrena.com/api/launch \
 
 ## Full Reference
 
-Fetch https://sutrena.com/llms-full.txt for the complete 77-tool API reference with all parameters, examples, and best practices.
+Fetch https://sutrena.com/llms-full.txt for the complete 70-tool API reference with all parameters, examples, and best practices.
