@@ -8,12 +8,12 @@ description: >-
 license: Apache-2.0
 metadata:
   author: sutrena
-  version: "9c3d9cc"
+  version: "226c08a"
 ---
 
 # Sutrena
 
-Hosted API that gives AI agents live web infrastructure. Forms, Pages, Analytics, Webhooks, Automations, Launch, Collect — 7 capabilities, 64 MCP tools. No local scaffolding needed.
+Hosted API that gives AI agents live web infrastructure. Forms, Pages, Analytics, Webhooks, Automations — 5 capabilities, 64 MCP tools. No local scaffolding needed.
 
 ## When to Use
 

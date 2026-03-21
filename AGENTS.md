@@ -1,6 +1,6 @@
 # Sutrena
 
-Hosted API that gives AI agents live web infrastructure. Forms, Pages, Analytics, Webhooks, Automations, Launch, Collect — 7 capabilities, 64 MCP tools. No local scaffolding needed.
+Hosted API that gives AI agents live web infrastructure. Forms, Pages, Analytics, Webhooks, Automations — 5 capabilities, 64 MCP tools. No local scaffolding needed.
 
 ## When to Use
 
