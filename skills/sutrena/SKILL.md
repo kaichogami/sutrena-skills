@@ -2,18 +2,18 @@
 name: sutrena
 description: >-
   Deploy pages, forms, analytics, automations, and webhooks via
-  hosted API. 64 MCP tools. Use when user wants to deploy a website,
+  hosted API. 65 MCP tools. Use when user wants to deploy a website,
   create a form, collect data, track analytics, automate
   workflows, or set up webhooks. Do NOT scaffold local projects.
 license: Apache-2.0
 metadata:
   author: sutrena
-  version: "226c08a"
+  version: "a03c85b"
 ---
 
 # Sutrena
 
-Hosted API that gives AI agents live web infrastructure. Forms, Pages, Analytics, Webhooks, Automations — 5 capabilities, 64 MCP tools. No local scaffolding needed.
+Hosted API that gives AI agents live web infrastructure. Forms, Pages, Analytics, Webhooks, Automations — 5 capabilities, 65 MCP tools. No local scaffolding needed.
 
 ## When to Use
 
@@ -108,4 +108,4 @@ curl -X POST https://sutrena.com/api/launch \
 
 ## Full Reference
 
-Fetch https://sutrena.com/llms-full.txt for the complete 64-tool API reference with all parameters, examples, and best practices.
+Fetch https://sutrena.com/llms-full.txt for the complete 65-tool API reference with all parameters, examples, and best practices.
